@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 9px;
+}
+
+table {
+    width: 100%;
+    table-layout: auto; /* Permite que las columnas se ajusten al contenido */
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 9px;
+    word-wrap: break-word; /* Permite que el texto largo se quiebre en lugar de desbordar */
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td:nth-child(2), td:nth-child(6) {
+    max-width: 200px; /* Establece un ancho máximo para la columna 2 y 6 */
+    overflow: hidden; /* Evita que el texto desborde */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es demasiado largo */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 9px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 9px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 9px;
+}
+
+#upload {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#clear {
+    background-color: #f44336;
+    color: white;
+}
+
+#download {
+    background-color: #008CBA;
+    color: white;
+}
