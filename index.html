@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir CSV y Descargar XLS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <label for="nombreIFA">Nombre IFA</label>
+        <input type="text" id="nombreIFA" name="Nombre IFA">
+        
+        <label for="indicacion">Indicación</label>
+        <input type="text" id="indicacion" name="Indicación">
+        
+        <label for="fileInput">Subir nbib</label>
+        <input type="file" id="fileInput" accept=".nbib" onchange="uploadNBIB()">
+        
+        <button id="clear">Limpiar</button>
+        <button id="download">Descargar XLS</button>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>PMID</th>
+                    <th>TI</th>
+                    <th>AU</th>
+                    <th>YYYY</th>
+                    <th>MMM</th>
+                    <th>AB</th>
+                    <th>JT</th>
+                    <th>PT</th>
+                    <th>DP</th>
+                    <th>DOI</th>
+                    <th>URL</th>
+                    <th>analisis</th>
+                    <th>inclusion</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Datos del CSV se cargarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</body>
+</html>
