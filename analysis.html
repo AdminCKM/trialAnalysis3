@@ -1,0 +1,46 @@
+<!-- analysis.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Estudio</title>
+    <link rel="stylesheet" href="estilo.css"> <!-- Si tienes un archivo CSS para la ventana emergente -->
+</head>
+<body>
+    <div id="analysis-container">
+        <h1>Detalles del Estudio #<span id="index"></span></h1>
+        <p><strong>PMID:</strong> <span id="pmid"></span></p>
+        <p><strong>TI:</strong> <span id="ti"></span></p>
+        <p><strong>URL:</strong> <a id="url" href="#" target="_blank">Enlace al estudio</a></p>
+        <p><strong>AB:</strong> <span id="ab"></span></p>
+        
+        <!-- Botones inferiores -->
+        <div id="bottom-buttons">
+            <button id="copy">Copiar</button>
+        </div>
+    </div>
+    
+    <!-- Botones de navegación en la esquina inferior derecha -->
+    <div id="nav-buttons">
+        <button id="previous">Anterior</button>
+        <button id="next">Siguiente</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Funcion copiar 
+        document.getElementById("copy").addEventListener("click", function () {
+            // Obtener el contenido del elemento <span id="ab">
+            const content = document.getElementById("ab").textContent;
+
+            // Copiar al portapapeles utilizando la API del portapapeles
+            navigator.clipboard.writeText(content).then(function () {
+                alert("Texto copiado al portapapeles.");
+            }).catch(function (error) {
+                alert("Hubo un error al copiar el texto: " + error);
+            });
+        });
+    </script>
+
+</body>
+</html>
